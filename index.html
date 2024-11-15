@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIGIENICOS</title>
+    <style>
+        body {
+            background-image: url('hi.jpg');
+            background-size: cover;
+            font-family: 'Gill Sans Ultra Bold', sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px blue;
+            animation: zoomIn 1s ease-in-out;
+        }
+        h3 {
+            color: white;
+            font-size: 2em;
+            margin-top: 20px;
+            text-shadow: 1px 1px 3px blue;
+            text-align: left;
+            margin-left: 20px;
+        }
+        p {
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            font-size: 1em;
+            margin: 20px;
+        }
+        .polaroid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .polaroid {
+            background: white;
+            padding: 10px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.5s;
+            animation: rotateIn 1s ease-out;
+            cursor: pointer;
+        }
+        .polaroid img {
+            width: 100%;
+            height: auto;
+        }
+        .polaroid h2 {
+            color: black;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .polaroid p {
+            color: black;
+            font-size: 1em;
+            margin-top: 10px;
+            height: 50px; /* Limitar altura del párrafo */
+            overflow: hidden; /* Ocultar texto desbordado */
+            text-overflow: ellipsis; /* Añadir puntos suspensivos */
+        }
+        .polaroid:hover {
+            transform: translateY(-10px);
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes rotateIn {
+            from { transform: rotate(-200deg); opacity: 0; }
+            to { transform: rotate(0); opacity: 1; }
+        }
+    </style>
+    <script>
+        function toggleText(event) {
+            const paragraph = event.currentTarget.querySelector('p');
+            if (paragraph.style.height === '50px') {
+                paragraph.style.height = 'auto';
+            } else {
+                paragraph.style.height = '50px';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>HIGIENICOS</h1>
+    <p>Tener una buena higiene en términos generales se puede tratar de mantener el cuerpo limpio y sano. Una buena higiene personal puede hacer que seas menos propenso a las enfermedades. La falta de estas medidas de higiene puede provocar algunos padecimientos como la sarna, la micosis, la influenza, COVID-19, enfermedades diarreicas, caries dental, entre otras. Pero más allá de eso, la higiene no solo se refiere a la limpieza personal y la salud, sino que también abarca prácticas que impactan nuestro entorno y sociedad.</p>
+    <h3>Tipos De Higiene:</h3>
+    <div class="polaroid-container">
+        <div class="polaroid" onclick="toggleText(event)">
+            <img src="image1.jpg" alt="Imagen 1">
+            <h2>Higiene Corporal</h2>
+            <p>Implica prácticas que contribuyen a la limpieza corporal, con especial atención a la piel, las uñas y el cabello. La piel es el mayor órgano del cuerpo y lo protege de posibles agresiones del ambiente. Para que se encuentre en buen estado, se recomienda la remoción de piel seca, polvo y las secreciones de las glándulas del cuerpo. Es importante destacar que el abuso de algunos productos de limpieza, como el cloro o el detergente, son nocivos para la piel.</p>
+        </div>
+    <div class="polaroid" onclick="toggleText(event)">
+        <img src="image2.jpg" alt="Imagen 2">
+        <h2>Higiene Deportiva</h2>
+        <p>Implica prácticas que resultan beneficiosas para la salud y permiten alcanzar mejores niveles deportivos, sobre todo en los espacios competitivos. Se debe empezar con actividades suaves para que el organismo pueda prepararse y se recomienda beber agua para mantener el cuerpo hidratado, la hidratación continúa incluso una vez finalizada la actividad. La vestimenta utilizada tiene que estar limpia, ser cómoda y no tiene que inhibir la transpiración.</p>
+    </div>
+    <div class="polaroid" onclick="toggleText(event)">
+        <img src="image3.jpg" alt="Imagen 3">
+        <h2>Higiene Escolar</h2>
+        <p>Refiere a las prácticas de higiene que se llevan a cabo dentro de una escuela o universidad. Además, tiene en cuenta la limpieza y mantención en óptimas condiciones de los espacios comunes como aulas, baños y oficinas.</p>
+    </div>
+    <div class="polaroid" onclick="toggleText(event)">
+        <img src="image4.jpg" alt="Imagen 4">
+        <h2>Higiene Alimentaria</h2>
+        <p>Se refiere a las prácticas necesarias para garantizar la seguridad y salubridad de los alimentos desde su producción hasta su consumo. Incluye la limpieza de manos, utensilios y superficies, así como la correcta cocción y almacenamiento de los alimentos.</p>
+    </div>
+    <div class="polaroid" onclick="toggleText(event)">
+        <img src="image5.jpg" alt="Imagen 5">
+        <h2>Higiene del Sueño</h2>
+        <p>Consiste en hábitos y prácticas que favorecen un sueño de calidad. Esto incluye mantener un horario regular para dormir, crear un ambiente propicio para el descanso y evitar el consumo de cafeína o el uso de dispositivos electrónicos antes de dormir.</p>
+    </div>
+    <div class="polaroid" onclick="toggleText(event)">
+        <img src="image6.jpg" alt="Imagen 6">
+        <h2>Higiene Dental</h2>
+        <p>Incluye prácticas como el cepillado regular de los dientes, el uso de hilo dental y visitas periódicas al dentista. Una buena higiene dental previene enfermedades como las caries y la gingivitis.</p>
+    </div>
+    <div class="polaroid" onclick="toggleText(event)">
+        <img src="image7.jpg" alt="Imagen 7">
+        <h2>Higiene Mental</h2>
+        <p>Se refiere a las prácticas que contribuyen al bienestar emocional y psicológico. Esto puede incluir técnicas de relajación, ejercicio regular, mantener relaciones sociales saludables y buscar ayuda profesional cuando sea necesario.</p>
+    </div>
+    <div class="polaroid" onclick="toggleText(event)">
+        <img src="image8.jpg" alt="Imagen 8">
+        <h2>Higiene del Hogar</h2>
+        <p>Implica mantener la limpieza y el orden en el hogar para prevenir enfermedades y crear un ambiente saludable. Esto incluye la limpieza regular de superficies, la ventilación adecuada y el manejo correcto de residuos.</p>
+    </div>
+</div>
+
+    
+</body>
+</html>
